@@ -1,0 +1,52 @@
+#banner {
+background-image: url(images/banner_medium.png), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+display: block;
+background-size: cover;
+height: 100vh;
+}
+
+.text {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  display: inline-block;
+  position: relative;
+  top: 150px;
+  left: 150px;
+  animation: typing 5s steps(35, end), blink 0.2s step-end infinite;
+  letter-spacing: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #596a98;
+  }
+}
+
+
+@media (max-width: 576px) {
+  #banner {
+  background-image: url(images/banner_small.png), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+  }
+}
+
+@media (min-width: 800px) {
+#banner {
+  background-image: url(images/banner.png), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+  }
+}
